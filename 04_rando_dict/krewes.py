@@ -1,14 +1,13 @@
-import random
 # Tiffany Yang
 # Team X
 # SoftDev
-# Lists and Dictionaries
-# 2024 - 9 - 13
-# 10 minutes
+# K04 -- Random Devo/Python Dictionaries & Random Selection/Select random devo from dictionary
+# 2024-09-13
+# time spent: 0.15
 
+import random
 
-def main():
-    krewes = {
+krewes = {
            4: [ 
 		'DUA','TAWAB','EVA','JACK','VICTOR','EVAN','JASON','COLYI','IVAN','TANZEEM',
 		'TAHMIM','STANLEY','LEON','NAOMI','NIA','ANASTASIA','JADY','BRIAN','JACOB',
@@ -22,6 +21,8 @@ def main():
                 'JESSICA','JACKIE','WEN YUAN','YINWEI','TIFFANY','JAYDEN DANIEL','PRINCEDEN' 
               ]
          }
-    print(random.choice(random.choice(list(krewes.values()))))
-    
-main()
+
+def pickDevo(devos):
+    print(random.choice(random.choice(list(devos.values()))))
+          
+pickDevo(krewes)
