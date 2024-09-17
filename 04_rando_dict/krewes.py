@@ -1,4 +1,4 @@
-# Chloe Wong, Tiffany Yang, Claire Song
+# Tiffany Yang, Chloe Wong, Claire Song
 # Team X
 # SoftDev
 # K04 -- Random Devo/Python Dictionaries & Random Selection/Select random devo from dictionary
