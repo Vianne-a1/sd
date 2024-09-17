@@ -24,5 +24,7 @@ krewes = {
 
 def pickDevo(devos):
     print(random.choice(random.choice(list(devos.values()))))
+
+    # First makes a list of the periods (4, 5) and chooses one of the values. After choosing that, it chooses one of the names from the period list. 
           
 pickDevo(krewes)
