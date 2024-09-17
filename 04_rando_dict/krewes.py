@@ -1,4 +1,4 @@
-# Tiffany Yang, Chloe Wong, Claire Song
+# Chloe Wong, Tiffany Yang, Claire Song
 # Team X
 # SoftDev
 # K04 -- Random Devo/Python Dictionaries & Random Selection/Select random devo from dictionary
@@ -23,8 +23,7 @@ krewes = {
          }
 
 def pickDevo(devos):
-    print(random.choice(random.choice(list(devos.values()))))
-
-    # First makes a list of the periods (4, 5) and chooses one of the values. After choosing that, it chooses one of the names from the period list. 
+	# Make a list of the period numbers and randomly select one. Then, randomly select a name from that period's values.
+    	print(random.choice(random.choice(list(devos.values()))))
           
 pickDevo(krewes)
