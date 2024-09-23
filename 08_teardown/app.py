@@ -1,9 +1,8 @@
 '''
-Ben Rudinski
-Novillo
+Ben Rudinski, Tiffany Yang, and Idk the name of the last person in the group
 SoftDev
 K08: Flask Questions
-2024-09-21
+2024-09-23
 time spent: 1
 '''
 
