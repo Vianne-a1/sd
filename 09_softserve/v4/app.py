@@ -14,3 +14,5 @@ def hello_world():
 if __name__ == "__main__":      # true if this file NOT imported
     app.debug = True            # enable auto-reload upon code change
     app.run()
+
+#debug PIN is the same as the previous one. Same as v3 but the print statements didn't show

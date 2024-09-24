@@ -13,3 +13,6 @@ def hello_world():
 
 app.debug = True
 app.run()
+
+#terminal prints a debugger pin, I wonder what it does
+#Also prints the statements in line 10 and 11 

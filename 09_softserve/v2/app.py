@@ -12,3 +12,5 @@ def hello_world():
     return "No hablo queso!"
 
 app.run()
+
+# returned less information regarding HTTP requests and locations

@@ -10,3 +10,5 @@ def hello_world():
     return "No hablo queso!"
 
 app.run()
+
+# Did not return faicon.ico HTTP but did return website that has the return statement.
