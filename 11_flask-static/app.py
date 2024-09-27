@@ -1,6 +1,6 @@
 # Chloe Wong, Tiffany Yang, Claire Song
 # SoftDev
-# Sep 2024
+# Sep 25 2024
 
 # DEMO
 # basics of /static folder
