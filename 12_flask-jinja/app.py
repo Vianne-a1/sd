@@ -5,13 +5,12 @@
 """
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Q0:
-<your response here>
+Returns a error - It ended up returning a error that it could not establish a with the server
 
 Q1:
-<your response here>
-
+It's http://127.0.0.1:5000/my_foist_template
 Q2:
-<your response here>
+The first argument is the file that it should pull the code/template from and the following arguments are the values for the placeholder variables in model_tmplt.html
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 """
 
