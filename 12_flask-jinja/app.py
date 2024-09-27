@@ -22,7 +22,7 @@ Q2:
 # (log prediction before executing...)
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 from flask import Flask, render_template
-app = Flask(__name__)
+app = Flask(__name__) #jibili
 
 @app.route("/")
 def hello_world():
