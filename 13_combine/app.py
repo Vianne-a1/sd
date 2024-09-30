@@ -10,16 +10,6 @@ app = Flask(__name__) #jibili
 def hello_world():
     return "No hablo queso!"
 
-title = "title"
-desc = "heading"
-roster = "TNPG + Chloe and Tiffany"
-table = numbercruncher()
-
-
-@app.route("/wdywtbwygp")
-def idkwtsf():
-    return render_template('idkwtsf.html', title = title, desc = heading, roster= roster, table = table)
-
 def numbercruncher():
     list1=[]
     percentage=[]
@@ -40,6 +30,16 @@ def numbercruncher():
         "team": "Jackie Zeng, Chloe Wong",
         "selected occupation": random.choices(job, weights=percentage),
         "occupations list": job})
+
+title = "title"
+desc = "heading"
+roster = "TNPG + Chloe and Tiffany"
+table = numbercruncher()
+
+
+@app.route("/wdywtbwygp")
+def idkwtsf():
+    return render_template('idkwtsf.html', title = title, desc = heading, roster= roster, table = table)
 
 
 '''    * an appropriate title,
