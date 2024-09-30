@@ -3,6 +3,7 @@
 # Sep 27 2024
 
 from flask import Flask, render_template
+import random
 app = Flask(__name__) #jibili
 
 @app.route("/")
