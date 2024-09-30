@@ -34,7 +34,8 @@ devos = ["Tracy Ye", "Tiffany Yang", "Chloe Wong"]
 
 @app.route("/teams") 
 def team():
-    return render_template( 'team.html', teamName="Untitiled", collection=devos)
+    return render_template('team.html', teamName="Untitled", collection=devos)
+
 
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # Q1: Can all of your teammates confidently predict the URL to use to load this page?
