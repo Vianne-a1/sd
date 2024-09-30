@@ -13,13 +13,33 @@ def hello_world():
 title = "title"
 desc = "heading"
 roster = "TNPG + Chloe and Tiffany"
-randomjob = random.choices(job, weights=percentage)
-table = "filler"
+table = numbercruncher()
 
 
 @app.route("/wdywtbwygp")
 def idkwtsf():
-    return render_template('idkwtsf.html', title = title, desc = heading, roster= roster, randomjob = job, table = table)
+    return render_template('idkwtsf.html', title = title, desc = heading, roster= roster, table = table)
+
+def numbercruncher():
+    list1=[]
+    percentage=[]
+    job=[]
+    print("the __name__ of this module is... ")
+    print(__name__)
+    with open('occupations.csv', newline='') as csvfile:
+        reader = csv.DictReader(csvfile)
+        for row in reader:
+            list1.append(row)
+    for dict1 in list1:
+        percentage.append(float(dict1.get("Percentage")))
+    for dict1 in list1:
+        job.append(dict1.get("Job Class"))
+    job.pop()
+    percentage.pop()
+    return jsonify({
+        "team": "Jackie Zeng, Chloe Wong",
+        "selected occupation": random.choices(job, weights=percentage),
+        "occupations list": job})
 
 
 '''    * an appropriate title,
