@@ -1,28 +1,18 @@
-< your heading here >
+Chloe Wong, Tiffany Yang
+Team Unknown
+SoftDev
+K14 --
+2024-10-7
+Time Spent:
 
 DISCO:
-* 
-* 
-* 
+* Uncommenting methods=['GET', 'POST']) gives a SyntaxError because it is missing an open parenthesis
+* Uncommenting print(request.args['username']) in disp_loginpage() gives a BadRequestKeyError because request.args is empty
+* The print statements from testmod0.py appear in the terminal
 -----------------------------------------------------------------------
 
 
 Q/C/C:
-* 
-* 
-* 
+* What is methods=['GET', 'POST']?
+* request.headers has information such as host and connection
 -----------------------------------------------------------------------
-
-
-OTHER?
-* 
-* 
-* 
------------------------------------------------------------------------
-
-
-
-
-
-
-
