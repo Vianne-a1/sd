@@ -8,63 +8,31 @@ time spent: 1 hr
 '''
 from flask import Flask, render_template, request
 
-app = Flask(__name__)    #create Flask object
+app = Flask(__name__)
 
+team_name = "Topher Forever"
+roster = ["Ben Rudinski, Claire Song, Tiffany Yang"]
 
-'''
-trioTASK:
-~~~~~~~~~~~ BEFORE RUNNING THIS, ~~~~~~~~~~~~~~~~~~
-...read for understanding all of the code below.
- * Some will work as written;
- *  ...other sections will not. 
+@app.route('/')
+def index():
+    return render_template('login.html', team_name=team_name, roster=roster)
 
-TASK:
- Predict which.
- 1. Devise simple tests to isolate components/behaviors.
- 2. Execute your tests.
- 3. Process results.
- 4. Findings yield new ideas for more tests? Yes: do them.
-
-PROTIP: Insert your own in-line comments
- wherever they will help
-  your future self and/or current teammates
-   understand what is going on.
-'''
-
-@app.route('/login', methods=["GET","POST"])
-def disp_loginpage():
-    #print("\n\n\n")
-    #print("***DIAG: this Flask obj ***")
-    #print(app)
-    #print("***DIAG: request obj ***")
-    #print(request)
-    #print("***DIAG: request.args ***")
-    #print(request.args)
-    #print("***DIAG: request.args['username']  ***")
-    #print(request.args['username'])
-    #print("***DIAG: request.headers ***")
-    #print(request.headers)
-    return render_template( 'login.html' )
-
-
-@app.route("/response") # , methods=['GET', 'POST'])
-def authenticate():
-    #print("\n\n\n")
-    #print("***DIAG: this Flask obj ***")
-    #print(app)
-    #print("***DIAG: request obj ***")
-    #print(request)
-    #print("***DIAG: request.args ***")
-    #print(request.args)
-    #print("***DIAG: request.args['username']  ***")
-    #print(request.args['username'])
-    #print("***DIAG: request.headers ***")
-    #print(request.headers)
-    return "Waaaa hooo HAAAH"  #response to a form submission
-
-
+@app.route('/submit', methods=['GET', 'POST'])
+def submit():
+    username = request.args.get('username') if request.method == 'GET' else request.form.get('username')
+    method_used = request.method
+    greeting = f"Hello, {username}! Welcome to our beautiful Flask App!"
     
-if __name__ == "__main__": #false if this file imported as module
-    #enable debugging, auto-restarting of server when this file is modified
-    app.debug = True 
-    app.run()
+    #explaining get vs post
+    explanation = """
+    GET: Sends data via the URL (useful for retrieving information).
+    POST: Sends data through the body (useful for modifying server-side data).
+    In this Flask app:
+    - GET: The username is passed via the URL.
+    - POST: The username is passed via the form body.
+    """
+    
+    return render_template('response.html', username=username, method=method_used, greeting=greeting, explanation=explanation, team_name=team_name, roster=roster)
+
+if __name__ == '__main__':
+    app.run(debug=True)
