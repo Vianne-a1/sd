@@ -1,8 +1,8 @@
 '''
-Ben Rudinski
+Tiffany Yang, Chloe Wong, Claire Song
 Topher Forever
 SoftDev
-K15: Intake -- Login and Response handling in flaask
+K16
 2024-10-08
 time spent: 1 hr
 '''
@@ -10,8 +10,8 @@ from flask import Flask, render_template, request
 
 app = Flask(__name__)
 
-team_name = "Topher Forever"
-roster = ["Ben Rudinski, Claire Song, Tiffany Yang"]
+team_name = "X"
+roster = ["Tiffany Yang, Chloe Wong, Claire Song"]
 
 @app.route('/')
 def index():
