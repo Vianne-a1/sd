@@ -22,9 +22,10 @@ def submit():
     username = request.args.get('username') if request.method == 'GET' else request.form.get('username')
     method_used = request.method
     greeting = f"Hello, {username}! Welcome to our beautiful Flask App!"
+    return render_template('response.html', username = username, method_used= method_used, greeting= greeting)
 
 @app.route('/logout', methods=['GET', 'POST'])
-def submit():
+def logout():
     return render_template('logout.html')
 
 

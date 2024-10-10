@@ -19,11 +19,8 @@ Roster: Ben Rudinski, Claire Song, Tiffany Yang
     <h2>Team: {{ team_name }}</h2>
     <h3>Roster: {{ roster | join(', ') }}</h3>
 
-    <a href="/">Go back to the form</a>
-
     <form action="/logout" method="GET">
-      <input type="text" name="username" placeholder="Your name">
-      <input type="submit" value="Submit with GET">
+      <input type="submit" value="Log out">
   </form>
 </body>
 </html>
