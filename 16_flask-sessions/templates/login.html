@@ -1,31 +1,29 @@
+<!--
+TNPG: Topher Forever
+Roster: Ben Rudinski, Claire Song, Tiffany Yang
+-->
+
 <!DOCTYPE html>
-<!-- 
-  Chloe Wong, Tiffany Yang, Claire Song
-  Team X
-  SoftDev
-  K15 - user sessions
-  2024-10-9
-  Time Spent: 
- -->
+<html lang="en">
+<head>
+    <meta charset ="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+</head>
+<body>
+    <h1>Welcome to the team: {{ team_name }}!</h1>
+    <h2>Roster: {{ roster | join(', ') }}</h2>
 
-
-<html>
-
-  <head>
-    <title> LOGIN PAGE </title>
-  </head>
-
-  <body>
-    <h1>:( Chloe Wong, Stella Yampolsky, and Jessica Yu</h1>
-    <h2>Howdy, friends!</h1>
-    <h3>
-      Enter your username below to proceed.
-    </h3>
-    <form action="/auth">
-      <input type="text" name="username">
-      <input type="submit" name="sub1">
+    <form action="/submit" method='POST'>
+        <label for="username">Enter Your Name:</label>
+        <input type="text" id="username" name="username" required>
+        <button type="submit">Submit</button>
     </form>
-    <br>
-  </body>
 
+    <p>Alternatively, you can submit with GET:</p>
+    <form action="/submit" method="GET">
+        <input type="text" name="username" placeholder="Your name">
+        <input type="submit" value="Submit with GET">
+    </form>
+</body>
 </html>
