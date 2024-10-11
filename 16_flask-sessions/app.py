@@ -7,6 +7,7 @@ K16
 time spent: 1 hr
 '''
 from flask import Flask, render_template, request
+import os
 
 app = Flask(__name__)
 
@@ -22,10 +23,13 @@ def submit():
     username = request.args.get('username') if request.method == 'GET' else request.form.get('username')
     method_used = request.method
     greeting = f"Hello, {username}! Welcome to our beautiful Flask App!"
+    app.secret_key = os.urandom(32)
+    
     return render_template('response.html', username = username, method_used= method_used, greeting= greeting)
 
 @app.route('/logout', methods=['GET', 'POST'])
 def logout():
+    session.pop(key)
     return render_template('logout.html')
 
 
