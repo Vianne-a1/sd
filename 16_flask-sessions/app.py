@@ -6,13 +6,14 @@ K16
 2024-10-08
 time spent: 1 hr
 '''
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, session, redirect, url_for
 import os
 
 app = Flask(__name__)
+app.secret_key = os.urandom(32)
 
-team_name = "X"
-roster = ["Tiffany Yang, Chloe Wong, Claire Song"]
+team_name = "Topher Forever"
+roster = ["Tiffany Yang", "Chloe Wong", "Claire Song"]
 
 @app.route('/')
 def index():
@@ -20,20 +21,15 @@ def index():
 
 @app.route('/submit', methods=['GET', 'POST'])
 def submit():
-    username = request.args.get('username') if request.method == 'GET' else request.form.get('username')
-    method_used = request.method
-    greeting = f"Hello, {username}! Welcome to our beautiful Flask App!"
-    app.secret_key = os.urandom(32)
+    if request.method == 'POST':
+        username = request.form.get('username')
+    else:
+        username = request.args.get('username')
     
-    return render_template('response.html', username = username, method_used= method_used, greeting= greeting)
+    greeting = f"Hello, {username}! Welcome to our beautiful Flask App!"
+    session['username'] = username  # Save username to session
 
-@app.route('/logout', methods=['GET', 'POST'])
-def logout():
-    session.pop(key)
-    return render_template('logout.html')
-
-
-    #explaining get vs post
+    # Explanation of GET vs POST
     explanation = """
     GET: Sends data via the URL (useful for retrieving information).
     POST: Sends data through the body (useful for modifying server-side data).
@@ -42,7 +38,20 @@ def logout():
     - POST: The username is passed via the form body.
     """
     
-    return render_template('response.html', username=username, method=method_used, greeting=greeting, explanation=explanation, team_name=team_name, roster=roster)
+    return render_template(
+        'response.html',
+        username=username,
+        method=request.method,
+        greeting=greeting,
+        explanation=explanation,
+        team_name=team_name,
+        roster=roster
+    )
+
+@app.route('/logout', methods=['GET'])
+def logout():
+    session.pop('username', None)
+    return render_template('logout.html')
 
 if __name__ == '__main__':
     app.run(debug=True)
