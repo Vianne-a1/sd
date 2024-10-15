@@ -4,7 +4,7 @@ Topher Forever
 SoftDev
 K16
 2024-10-08
-time spent: 1 hr
+time spent: 2 hr
 '''
 from flask import Flask, render_template, request, session, redirect, url_for
 import os
@@ -12,7 +12,7 @@ import os
 app = Flask(__name__)
 app.secret_key = os.urandom(32)
 
-team_name = "Topher Forever"
+team_name = "X"
 roster = ["Tiffany Yang", "Chloe Wong", "Claire Song"]
 
 @app.route('/')
@@ -26,7 +26,7 @@ def submit():
     else:
         username = request.args.get('username')
     
-    greeting = f"Hello, {username}! Welcome to our beautiful Flask App!"
+    greeting = f"Hello, {username}! Welcome to our Flask App!"
     session['username'] = username  # Save username to session
 
     # Explanation of GET vs POST
