@@ -1,23 +1,17 @@
-'''
-Ben Rudinski
-Topher Forever
-SoftDev
-K15: Intake -- Login and Response handling in flaask
-2024-10-08
-time spent: 1 hr
-'''
-from flask import Flask, render_template, request
+# Chloe Wong, Tiffany Yang, Claire Song
+# Team X
+# SoftDev
+# K17 - opening HTML/CSS in flask app
+# 2024-10-16
+# Time Spent: 0.1 hr
 
+from flask import Flask, render_template
 app = Flask(__name__)
 
-team_name = "Topher Forever"
-roster = ["Ben Rudinski, Claire Song, Tiffany Yang"]
-
-@app.route('/')
+@app.route("/")
 def index():
-    return render_template('index.html', team_name=team_name, roster=roster)
+    return render_template('index.html', style='static/style.css')
 
-    
-
-if __name__ == '__main__':
-    app.run(debug=True)
+if __name__ == "__main__":
+    app.debug = True
+    app.run()
