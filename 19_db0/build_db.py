@@ -14,15 +14,33 @@ c = db.cursor()               #facilitate db ops -- you will use cursor to trigg
 
 #==========================================================
 
+# test SQL stmt in sqlite3 shell, save as string
+c.execute('''CREATE TABLE IF NOT EXISTS students (
+    id INTEGER PRIMARY KEY, 
+    name TEXT
+)''')
 
-"""
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-< < < INSERT YOUR TEAM'S DB-POPULATING CODE HERE > > >
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-"""
+# run SQL statement 
+c.execute('''CREATE TABLE IF NOT EXISTS courses (
+    code TEXT, 
+    mark INTEGER, 
+    id INTEGER,
+    FOREIGN KEY(id) REFERENCES students(id)
+)''')
 
-command = ""          # test SQL stmt in sqlite3 shell, save as string
-c.execute(command)    # run SQL statement
+
+with open("students.csv") as students_csv:
+    reader = csv.DictReader(students_csv)  
+    for row in reader:
+        c.execute("INSERT INTO students (id, name) VALUES (?, ?)", (row['id'], row['name']))
+
+
+with open("courses.csv") as courses_csv:
+    reader = csv.DictReader(courses_csv)  
+    for row in reader:
+        c.execute("INSERT INTO courses (code, mark, id) VALUES (?, ?, ?)", 
+                  (row['code'], row['mark'], row['id']))
+
 
 #==========================================================
 
