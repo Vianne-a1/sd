@@ -14,6 +14,12 @@ https://github.com/jessicay38/softdev/blob/9eaf1449391b545676b5293365351ff0e5bb4
 FD:
 https://github.com/TheChristLouie/Soft-Dev/tree/main/20_fd_coolteam_louieC-yampolskyS
 
-q0: 0
+q0 (Did you have to consult resources beyond your Devo-generated on-ramp? Your answer should be a single binary digit.)
+0
 
-q1: I prefer Tailwind CSS because of the flexibility it offers to create unique layouts and also the class-based styling keeps workflow efficient and responsive.
+q0b If answer to preceding question is 1, cite all resources consulted -- including verbal consultations and/or neighbouring team's readme. 1citation/line.)
+n/a
+
+q1 (only to be answered after you have finished... At this point, which FEF do you prefer, and why? Your answer to this Q should be the only portion of your submission that differs from that of your teammate.)
+
+I prefer Tailwind due the flexibility in styling and class based styling. It also looks prettier to me.
