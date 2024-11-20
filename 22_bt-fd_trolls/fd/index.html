@@ -1,1 +1,94 @@
 
+<!doctype html>
+<!-- SoftDev
+K20 --Team Something -Jzeng and Tyang
+2024-11-18
+Time Spent: 1
+-->
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stuyvesant High School Information</title>
+    <!-- Compressed CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.9.0/dist/css/foundation.min.css" crossorigin="anonymous">
+    <style>
+      /* CSS for horizontal scrolling */
+      .horizontal-scroll {
+        overflow-x: auto;
+        white-space: nowrap;
+      }
+      .scroll-item {
+        display: inline-block;
+        padding: 10px;
+        min-width: 200px;
+      }
+    </style>
+  </head>
+  <body>
+    <script src="js/vendor/jquery.js"></script>
+    <script src="js/vendor/what-input.js"></script>
+    <script src="js/vendor/foundation.min.js"></script>
+    <script>
+      $(document).foundation();
+    </script>
+
+    <!-- Navigation Bar -->
+    <div class="top-bar">
+      <p class="description">Navigate through the site effortlessly.</p>
+      <div class="top-bar-left">
+        <ul class="dropdown menu" data-dropdown-menu>
+          <li class="menu-text">Stuyvesant Info</li>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Admissions</a></li>
+          <li><a href="#">Extracurriculars</a></li>
+        </ul>
+      </div>
+      <div class="top-bar-right">
+        <ul class="menu">
+          <li><input type="search" placeholder="Search"></li>
+          <li><button type="button" class="button">Search</button></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Introduction Section -->
+    <div class="row intro-section">
+      <div class="columns">
+        <h2>About Stuyvesant High School</h2>
+        <p>Stuyvesant High School (/ˈstaɪvəsənt/ STY-və-sənt) is a co-ed, public, college-preparatory, specialized high school in Manhattan, New York City, United States. The school, commonly referred to among its students, faculty, and alumni as "Stuy" (/staɪ/ STY), specializes in developing talent in math, science, and technology. Operated by the New York City Department of Education, specialized schools offer tuition-free, advanced classes to New York City high school students.</p>
+      </div>
+    </div>
+
+    <!-- Main Content Area with Horizontal Scroll -->
+    <div class="grid-y medium-grid-frame">
+      <div class="cell medium-auto medium-cell-block-container">
+        <div class="grid-x grid-padding-x">
+          <!-- Sidebar with Horizontal Scroll -->
+          <div class="cell medium-4 medium-cell-block-y horizontal-scroll">
+            <h2>Admissions Information</h2>
+            <p class="description">Learn about the rigorous admissions process and what makes Stuyvesant unique.</p>
+            <div class="scroll-item">Passing the SHSAT is key.</div>
+            <div class="scroll-item">Only the top scorers are accepted.</div>
+            <div class="scroll-item">Admissions are very competitive.</div>
+          </div>
+
+          <!-- Main Body -->
+          <div class="cell medium-8 medium-cell-block-y">
+            <h2>Extracurricular Opportunities</h2>
+            <p class="description">Explore the diverse extracurricular activities offered at Stuyvesant High School.</p>
+            <p>From an award-winning Math Team to a vibrant theater scene, Stuyvesant provides students with a wide range of opportunities to pursue their passions and develop new skills.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer Section -->
+    <div class="cell shrink footer">
+      <h3>Created by: TeamSomething</h3>
+      <p class="description">Thank you for exploring Stuyvesant High School with us.</p>
+    </div>
+  </body>
+</html>
