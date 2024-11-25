@@ -26,7 +26,7 @@ This API provides access to Spotify’s music catalog and user data. It allows f
 
 ## The Bad:  
 - Requires OAuth setup 
-- Way too many refsa
+- Way too many refs 
 
 ## The Ugly:  
 - No offline access—requires internet connectivity for every API call.  
