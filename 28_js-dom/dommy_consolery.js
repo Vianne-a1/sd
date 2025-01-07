@@ -105,6 +105,56 @@ var stripe = function()
 // FAC
 // GCD
 
+//factorial:
+
+//<your team's fact(n) implementation>
+function fact(n){
+    if(n == 0){
+      return 0;
+    }
+    if (n == 1){
+      return 1;
+    }
+      return n*fact(n-1);
+  }
+  //TEST CALLS
+  fact(1)
+  fact(5)
+  fact(10)
+  // (writing here can facilitate EZer copy/pasting into dev console now and later...)
+  
+  
+  //-----------------------------------------------------------------
+  
+  
+  //fib:
+  
+  //<your team's fib(n) implementation>
+  function fib(n){
+    if(n == 0){
+      return 0;
+    }
+      if(n == 1){
+      return 1;
+    }
+      return fib(n-1) + fib(n-2);
+  }
+  //TEST CALLS
+  fib(0)
+  fib(5)
+  fib(10)
+  // (writing here can facilitate EZer copy/pasting into dev console now and later...)
+  
+  function gcd(n){
+    let x=1;
+    for (let i=0;i<n, i++;){
+        if (n%i==0){
+            x = i;
+        }
+        return x;
+    }
+  }
+  //=================================================================
 
 // In addition to the style shown above,
 //  you are encouraged to test drive the "arrow function syntax" as shown below.
