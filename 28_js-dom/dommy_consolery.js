@@ -105,62 +105,44 @@ var stripe = function()
 // FAC
 // GCD
 
-//factorial:
+// Factorial function (recursive implementation)
+function fact(n) {
+  if (n == 0) return 1;   // Base case: 0! = 1
+  return n * fact(n - 1); // Recursive step: n * (n-1)!
+}
+// TEST CALLS
+fact(1);  // Expected output: 1
+fact(5);  // Expected output: 120
+fact(10); // Expected output: 3628800
 
-//<your team's fact(n) implementation>
-function fact(n){
-    if(n == 0){
-      return 0;
-    }
-    if (n == 1){
-      return 1;
-    }
-      return n*fact(n-1);
-  }
-  //TEST CALLS
-  fact(1)
-  fact(5)
-  fact(10)
-  // (writing here can facilitate EZer copy/pasting into dev console now and later...)
-  
-  
-  //-----------------------------------------------------------------
-  
-  
-  //fib:
-  
-  //<your team's fib(n) implementation>
-  function fib(n){
-    if(n == 0){
-      return 0;
-    }
-      if(n == 1){
-      return 1;
-    }
-      return fib(n-1) + fib(n-2);
-  }
-  //TEST CALLS
-  fib(0)
-  fib(5)
-  fib(10)
-  // (writing here can facilitate EZer copy/pasting into dev console now and later...)
-  
-  function gcd(n){
-    let x=1;
-    for (let i=0;i<n, i++;){
-        if (n%i==0){
-            x = i;
-        }
-        return x;
-    }
-  }
-  //=================================================================
+// Fibonacci function (recursive implementation)
+function fib(n) {
+  if (n == 0) return 0;   // Base case: fib(0) = 0
+  if (n == 1) return 1;   // Base case: fib(1) = 1
+  return fib(n - 1) + fib(n - 2); // Recursive step: fib(n) = fib(n-1) + fib(n-2)
+}
+// TEST CALLS
+fib(0);  // Expected output: 0
+fib(5);  // Expected output: 5
+fib(10); // Expected output: 55
 
-// In addition to the style shown above,
-//  you are encouraged to test drive the "arrow function syntax" as shown below.
-//  Note anything notable.
-const myFxn = (param1, param2) => {
-    // body
-    return retVal;
+// Greatest Common Divisor function (iterative implementation)
+const gcd = (a, b) => {
+  while (b !== 0) {  // Continue until b becomes 0
+      let temp = b;  // Temporarily store b
+      b = a % b;     // Update b to the remainder of a divided by b
+      a = temp;      // Update a to the old value of b
+  }
+  return a;          // Return the greatest common divisor
 };
+// TEST CALLS
+gcd(48, 18); // Expected output: 6
+gcd(100, 25); // Expected output: 25
+gcd(7, 13);  // Expected output: 1 (prime numbers)
 
+// Example of using arrow function syntax
+const myFxn = (param1, param2) => {
+  return param1 + param2; // Example: returns the sum of the two parameters
+};
+// TEST CALLS
+myFxn(5, 10); // Expected output: 15
