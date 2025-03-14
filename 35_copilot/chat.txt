@@ -1,0 +1,159 @@
+Scenario Two: Your team has been contracted to create a web log hosting site, with the following features:
+
+    Users will have to register to use the site.
+    A logged-in user will be able to
+        Create a new blog
+        Update their blog by adding a new entry
+        View and edit their own past entries
+        View the blogs of other users
+> 1 reference
+
+> For Scenario Two, where your team is contracted to create a web log hosting site, here are the key features to implement:
+
+    Users need to register to use the site.
+    A logged-in user should be able to:
+        Create a new blog.
+        Update their blog by adding a new entry.
+        View and edit their own past entries.
+        View the blogs of other users.
+
+You can find more detailed project guidelines and steps in the readme file.
+Your "software solution," to use the parlance of our times, will incorporate a few distinct components, so it is imperative that your team develop a design before taking any further steps.
+
+Your team's first order of business is reaching agreement as to how your project will be organized and how you will divide work. It will be imperative that each teammate a) shares the same organizational model of your target, and b)
+understands how they and their work will fit into it.
+
+Enter the design document. Design by next class session.
+
+(Nota bene: This is your only deliverable for next class. All your efforts should be directed to doing this job well.)
+Design Document Specifications:
+
+    A list of program components with role of each specified. (e.g., a car engine is comprised of various components: carburetor, alternator, radiator, spark plugs, etc. Each must perform its role for the engine to do its overall job.)
+    Explanation of how each component relates to the others.
+        Component map visualizing relationships between components.
+    Database Organization (tables? Relationships b/t tables? etc.)
+    Site map for front end
+        Represent each page you envision for your site.
+        Show linkages conveying all possilbe pathways for a user traversing site.
+    A breakdown of the different tasks required to complete this project
+        Include assignments of each task to each group member
+    Append this line to your heading: TARGET SHIP DATE: {yyyy-mm-dd}
+    Amalgamate these components into a single PDF, store in designated location.
+
+Project Guidelines:
+
+    Flask will serve as your web server/delivery framework.
+    SQLite3 will serve as your backend data storage system.
+        As you grown your "sql-fu", always start with Devo Knowledge Base (QAF, n&c) and primary documentation. (...and if none of these have the answer you seek, and you find a SO post that is actually useful, or any other diamond in the rough of the Intertrash, add it to Devo KB)
+        Get creative, think boldly, get your hands dirty as you experiment via the sqlite3 shell and see what works/sticks...
+    Multiple Python files should be used, as necessary, for application layer. (a.k.a. "middleware" modules, etc.)
+    CSS: You may provide your own IFF...
+        your site is fully functional with CSS is stripped away.
+        you store it in the appropriate location for flask to use it.
+        it is all written by you
+    Use Q&A forum liberally. "A rising tide lifts all boats."
+    Reminder: include heading as comment in all source files.
+    Platinum Rule: THOUST APP SHALT NOT FAIL.
+
+Your website will incorporate a few distinct components, so it is imperative that your team develop a design and agree upon roles before you move to implementation.
+
+You will need a DEVLOG for this project.
+
+    Devlog allows any group member at any time to see the current state of the project.
+    PM will make sure devlog is being maintained, but will not make all entries.
+    The devlog should be a plain text file, stored in the specified location.
+    When any team member stops working and pushes changes to github, they should update the devlog explaining what changes have been made. Include errors/bugs discovered (or created).
+    Separate devlog entries with a newline.
+    Most recent entry at the bottom.
+    Each entry should begin with the following format: firstL -- TIMESTAMP\n ( e.g.: topherM -- 1999-12-31 23:59 )
+
+FINAL DELIVERABLES (watch this section for updates):
+
+    hardcopy:
+        final version of design doc (x1)
+        staple because it indicates "you have it together"
+    repo structure:
+
+app/
+    __init__.py
+    static/
+        css/          ( O P T I O N A L )
+    templates/
+design.pdf
+devlog.txt
+flag.jpg
+README.md
+requirements.txt
+
+    README.md
+        Clearly visible at top: <Project Name> by <Team Name>
+        Roster with roles
+        Description of website/app (a la abstract of a scientific paper... NOT your entire design doc!)
+        Install guide:
+            How to clone/install.
+        Launch codes:
+            How to run.
+    design.pdf
+        Latest/current version of your design document.
+        Revisions since v0 noted/explained in devlog.
+    requirements.txt
+        It will list flask as well as any other pip installs your app requires.
+        Latest version of all packages.
+        Clearance must be sought and granted for any modules/libraries not explicitly covered in class.
+
+
+> <plan> <step> <tool>functions.getfile</tool> <parameters> { "path": "assignments/p00/readme.md", "repo": "stuy-softdev/notes-and-code" } </parameters> </step> </plan>
+
+code it
+> 1 reference
+
+> The project involves creating a web log hosting site with the following components:
+
+    Flask as the web server/delivery framework.
+    SQLite3 as the backend data storage system.
+    Multiple Python files for application layers.
+    Optional CSS for styling if the site is fully functional without it.
+
+> To start, follow these steps:
+
+    Set up a basic structure for the Flask application.
+    Configure the SQLite3 database.
+    Implement routes and templates for the required features (user registration, blog creation, blog updates, viewing and editing entries).
+
+> If you need specific guidance or code for any part of this setup, please let me know.
+
+code for all of it
+2 references
+
+To proceed with creating the web log hosting site, here is the relevant structure and guidelines from the project:
+Project Structure
+Code
+
+app/
+    __init__.py
+    static/
+        css/          (O P T I O N A L)
+    templates/
+chatlog.txt
+log.txt
+flag.jpg
+README.md
+requirements.txt
+
+Design Document Specifications
+
+    List of program components with their roles.
+    Explanation of how each component relates to the others.
+    Database organization (tables and relationships).
+    Site map for the front end.
+    Breakdown of tasks with assignments to each group member.
+    Append the line: TARGET SHIP DATE: {yyyy-mm-dd}.
+    Combine these components into a single PDF.
+
+Guidelines
+
+    Use Flask for the web server and SQLite3 for the backend.
+    Multiple Python files for application layers.
+    CSS is optional but must be functional without it.
+
+You can refer to the readme file for more details.
